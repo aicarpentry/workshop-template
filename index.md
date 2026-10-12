@@ -115,6 +115,8 @@ Edit the general explanatory paragraph below if you want to change the pitch.
         <div class="card-body">
             <p>
             <strong><a href="https://aicarpentry.org">AI Carpentry</a></strong> teaches researchers to make informed use of artificial intelligence.
+            </p>
+            <p>
             Our mission is to empower people to make informed decisions about the use of artificial intelligence tools and methods in their projects and to prepare them to become advocates for judicious use of AI in research.
             The target audience of AI Carpentry is researchers and data scientists with little to no expertise in machine learning and artificial intelligence methods.
             </p>
