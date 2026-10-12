@@ -66,24 +66,11 @@ And run 'make workshop-check' *before* committing to make sure that changes are 
 {% comment %}
 Check DC curriculum
 {% endcomment %}
-
+<!--
 {% if site.carpentry == "dc" %}
 {% unless site.curriculum == "dc-astronomy" or site.curriculum == "dc-ecology" or site.curriculum == "dc-genomics" or site.curriculum == "dc-geospatial" or site.curriculum == "dc-image" or site.curriculum == "dc-socsci" %}
 <div class="alert alert-warning">
 It looks like you are setting up a website for a Data Carpentry curriculum but you haven't specified the curriculum type in the <code>_config.yml</code> file (current value in <code>_config.yml</code>: "<strong>{{ site.curriculum }}</strong>", possible values: <code>dc-image</code>, <code>dc-astronomy</code>, <code>dc-ecology</code>, <code>dc-genomics</code>, <code>dc-socsci</code>, or <code>dc-geospatial</code>). After editing this file, you need to run <code>make serve</code> again to see the changes reflected.
-</div>
-{% endunless %}
-{% endif %}
-
-
-{% comment %}
-Check SWC curriculum
-{% endcomment %}
-
-{% if site.carpentry == "swc" %}
-{% unless site.curriculum == "swc-inflammation" or site.curriculum == "swc-gapminder" %}
-<div class="alert alert-warning">
-It looks like you are setting up a website for a Software Carpentry curriculum but you haven't specified the curriculum type in the <code>_config.yml</code> file (current value in <code>_config.yml</code>: "<strong>{{ site.curriculum }}</strong>", possible values: <code>swc-inflammation</code>, or <code>swc-gapminder</code>). After editing this file, you need to run <code>make serve</code> again to see the changes reflected.
 </div>
 {% endunless %}
 {% endif %}
@@ -111,7 +98,7 @@ displayed if the 'eventbrite' field in the header is not set.
     });
 </script>
 {% endif %}
-
+-->
 
 {% comment %}
 INTRODUCTION
@@ -124,20 +111,18 @@ Edit the general explanatory paragraph below if you want to change the pitch.
   <!-- left column spans 2 rows -->
   <div class="col-md-6">
     <div class="card h-100">
-        <h5 class="card-header">The Carpentries</h5>
+        <h5 class="card-header">AI Carpentry</h5>
         <div class="card-body">
             <p>
-            <strong><a href="https://carpentries.org">The Carpentries</a></strong> project comprises the
-            <a href="{{site.dc_site}}">Data Carpentry</a>,
-            <a href="{{site.hpcc_site}}">High-Performance Computing Carpentry</a>,  
-            <a href="{{site.lc_site}}">Library Carpentry</a>, and
-            <a href="{{site.swc_site}}">Software Carpentry</a>
-             communities of Instructors, Trainers, Maintainers, helpers, and supporters who share a mission to teach foundational computational and data science skills to researchers.
+            <strong><a href="https://aicarpentry.org">AI Carpentry</a></strong> teaches researchers to make informed use of artificial intelligence.
+            Our mission is to empower people to make informed decisions about the use of artificial intelligence tools and methods in their projects and to prepare them to become advocates for judicious use of AI in research.
+            The target audience of AI Carpentry is researchers and data scientists with little to no expertise in machine learning and artificial intelligence methods.
             </p>
-            {% assign intro_file = site.carpentry | append: '/intro.html' %}
-            {% if isOfficial %}
-            {% include {{ intro_file }} %}
-            {% endif %}
+            <p>
+            Each of our workshops is aimed at a different target audience with their own goals and background knowledge.
+            In each case, the goal is to empower learners to make informed decisions about the application of AI in their projects.
+            We achieve this by combining conceptual learning with plenty of hands-on exploration and practice.
+            </p>
         </div>
     </div>
   </div>
@@ -330,7 +315,7 @@ address.
             Modify or remove the block below if you plan to record the workshop.
             {% endcomment %}
             <p id="recordings">
-            Carpentries workshops are designed to be interactive rather than lecture-based, with lessons that build upon one another.
+            AI Carpentry workshops are designed to be interactive rather than lecture-based, with lessons that build upon one another.
             To foster a positive online learning environment, we strongly recommend that participants join in real time.
             As a result, workshop recordings are not recommended and may not be available to learners.
             </p>
@@ -365,16 +350,6 @@ address.
         </dd>
     </div>
     
-    <div class="row">
-        <dt class="col-sm-2 col-md-2 py-2 px-3 bg-body-light text-body-secondary fw-bold">Workshop FAQ</dt>
-        <dd class="col py-2 px-3 mx-0 mb-0">
-            <p id="workshops-faq">
-            For answers to frequently asked questions about workshops,
-            refer to <a href="https://carpentries.org/workshops/workshops-faq">the Carpentries Workshop FAQ</a>.
-            </p>    
-        </dd>
-    </div>
-
     <!-- <div class="row">
         <dt class="col-sm-2 col-md-2 py-2 px-3 bg-body-light text-body-secondary fw-bold">Accessibility</dt>
         <dd class="col py-2 px-3 mx-0 mb-0">
@@ -429,7 +404,6 @@ We will use this <a href="{{ page.collaborative_notes }}">collaborative document
 
 {% comment %}
 SURVEYS - DO NOT EDIT SURVEY LINKS
-{% endcomment %}
 <div class="card mb-2">
   <h5 class="card-header">Surveys</h5>
   <div class="card-body">
@@ -485,28 +459,13 @@ SURVEYS - DO NOT EDIT SURVEY LINKS
     </div>
   </div>
 </div>
-
+{% endcomment %}
 
 {% comment %}
 SCHEDULE
 
 Show the workshop's schedule.
 
-Small changes to the schedule can be made by modifying the
-`schedule.html` found in the `_includes` folder for your
-workshop type (`swc`, `lc`, or `dc`). Edit the items and
-times in the table to match your plans. You may also want to
-change 'Day 1' and 'Day 2' to be actual dates or days of the
-week.
-
-For larger changes, a blank template for a 4-day workshop
-(useful for online teaching for instance) can be found in
-`_includes/custom-schedule.html`. Add the times, and what
-you will be teaching to this file. You may also want to add
-rows to the table if you wish to break down the schedule
-further. To use this custom schedule here, replace the block
-of code below the Schedule `<h2>` header below with
-`{% include custom-schedule.html %}`.
 {% endcomment %}
 
 <div class="card mb-2">
@@ -549,17 +508,7 @@ please preview your site before committing, and make sure to run
 
 <h2 id="setup">Setup</h2>
 <p>
-  To participate in a
-  {% if site.carpentry == "swc" %}
-  Software Carpentry
-  {% elsif site.carpentry == "dc" %}
-  Data Carpentry
-  {% elsif site.carpentry == "lc" %}
-  Library Carpentry
-  {% elsif site.carpentry == "hpcc" %}
-  High-Performance Computing Carpentry
-  {% endif %}
-  workshop, you will need access to software as described below.
+  To participate in an AI Carpentry workshop, you will need access to software as described below.
   In addition, you will need an up-to-date web browser.
 </p>
 <p>

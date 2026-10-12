@@ -1,0 +1,45 @@
+{% comment %}
+User Workshop: Novice Programmer
+{% endcomment %}
+
+
+{% if site.curriculum == "user-novice" %}
+
+<p id="who">
+  <strong>Who:</strong>
+  The course is aimed at graduate students and other researchers who work with data and want to write programs to work more efficiently with that data.
+  <strong>
+    You do not need to have any previous knowledge of the tools that will be presented at the workshop.
+  </strong>
+</p>
+
+
+{% comment %}
+User Workshop: Competent Programmer
+{% endcomment %}
+
+{% elsif site.curriculum == "user-cp" %}
+
+<p id="who">
+  <strong>Who:</strong>
+FIXME
+</p>
+
+{% comment %}
+Dev Workshop
+{% endcomment %}
+
+{% elsif site.curriculum == "developer" %}
+
+<p id="who">
+  <strong>Who:</strong>
+FIXME
+</p>
+
+{% comment %}
+All other workshops
+{% endcomment %}
+
+{% else %}
+{% include warning-curriculum.html %}
+{% endif %}

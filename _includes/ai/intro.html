@@ -1,0 +1,42 @@
+{% comment %}
+User Workshop: Novice Programmer
+{% endcomment %}
+
+
+{% if site.curriculum == "user-novice" %}
+
+<p id="workshop-intro">
+  This workshop is for learners with no previous experience of writing code, who want/need to begin analysing data.
+  The lessons are particularly relevant to learners working in research.
+</p>
+
+
+{% comment %}
+User Workshop: Competent Programmer
+{% endcomment %}
+
+{% elsif site.curriculum == "user-cp" %}
+
+<p id="workshop-intro">
+  This workshop is for learners with some existing programming ability but who still need more practice to be able to work quickly or adapt easily to new kinds of tasks and contexts.
+</p>
+
+{% comment %}
+Dev Workshop
+{% endcomment %}
+
+{% elsif site.curriculum == "developer" %}
+
+<p id="workshop-intro">
+  This workshop is for competent programmers who want to implement machine/deep learning methods in their own software/data analysis workflows. 
+  The primary audience for this workshop is graduate students and early career researchers who have or are going to have data and want to begin applying deep learning methods to extract insights. 
+  We also hope to help research group leaders, educators, others who want to expand their understanding of the technologies so they can better advise other people.
+</p>
+
+{% comment %}
+All other workshops
+{% endcomment %}
+
+{% else %}
+{% include warning-curriculum.html %}
+{% endif %}

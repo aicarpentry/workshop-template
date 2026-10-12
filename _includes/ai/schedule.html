@@ -1,0 +1,51 @@
+{% comment %}
+This is the typical schedule for the AI Carpentry workshops.
+The schedule for the different curricula are listed here:
+- user-novice
+- user-cp
+- dev
+{% endcomment %}
+
+{% if site.curriculum == "user-novice" %}
+<div class="row">        <!-- first two days -->
+  <div class="col-md-6"> <!-- left column -->
+    <h5>Day 1</h5>
+    <table class="table table-striped">
+      <tr>               <!-- row 1   -->
+        <td>Morning</td>        <!-- time    -->
+        <td>Introduction</td>        <!-- content -->
+      </tr>
+      <tr>               <!-- row 2   -->
+        <td></td>        <!-- time    -->
+        <td><a href="https://carpentries-incubator.github.io/llms-intro-novice/">Exploring Large Language Models</a></td>        <!-- content -->
+      </tr>
+    <tr>               <!-- row 4   -->
+      <td>Afternoon</td>        <!-- time    -->
+      <td><a href="https://carpentries-incubator.github.io/coding-with-llms-novice/">Learning Programming with GenAI (part 1)</a></td>        <!-- content -->
+    </tr>
+  </table>
+  </div>
+  <div class="col-md-6"> <!-- right column -->
+    <h5>Day 2</h5>
+    <table class="table table-striped">
+      <tr>               <!-- row 1   -->
+        <td>Morning</td>        <!-- time    -->
+        <td><a href="https://carpentries-incubator.github.io/genai-implications-novice/">Considering Implications of GenAI Use</a></td>        <!-- content -->
+      </tr>
+      <tr>               <!-- row 2   -->
+        <td>Afternoon</td>        <!-- time    -->
+        <td><a href="https://carpentries-incubator.github.io/coding-with-llms-novice/">Learning Programming with GenAI (part 2)</a></td>        <!-- content -->
+      </tr>
+    </table>
+  </div>
+</div>
+
+{% elsif site.curriculum == "user-cp" %}
+<p>FIXME</p>
+
+{% elsif site.curriculum == "developer" %}
+<p>FIXME</p>
+
+{% else %}
+{% include warning-curriculum.html %}
+{% endif %}
