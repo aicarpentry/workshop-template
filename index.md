@@ -50,14 +50,7 @@ And run 'make workshop-check' *before* committing to make sure that changes are 
 {% if fixmes %}
 <div class="alert alert-danger">
     <p>
-        This is the Carpentries workshop template. Fill in the required variables as described in the <a href="{{site.url}}{{site.baseurl}}/customization/index.html#yaml-header">customisation</a> instructions to remove this message.
-    </p>
-    <p>
-        If you are running a self-organized workshop or have not put in a workshop request yet, please also fill in <a href="{{site.amy_site}}/forms/self-organised/">this workshop request form</a> to let us know about your workshop and our administrator may contact you if we need any extra information.
-    </p>
-    <p>
-        If this is a pilot workshop for a new lesson, set the <code>pilot</code> field to <code>true</code> in <code>_config.yml</code>.
-        For workshops teaching a lesson in The Carpentries Incubator, remember to uncomment and supply values for <code>incubator_lesson_site</code>, <code>incubator_pre_survey</code>, and <code>incubator_post_survey</code> fields in <code>_config.yml</code>.
+        This is the AI Carpentry workshop template. Fill in the required variables as described in the <a href="{{site.url}}{{site.baseurl}}/customization/index.html#yaml-header">customisation</a> instructions to remove this message.
     </p>
 </div>
 {% endif %}
@@ -138,11 +131,11 @@ Edit the general explanatory paragraph below if you want to change the pitch.
         <strong>Want to learn more and stay engaged with The Carpentries?</strong>
         </p>
         <p class="text-center">
-        Carpentries Clippings is The Carpentries' monthly newsletter, where we share community news, community job postings, and more.
+        Carpentries Clippings is The Carpentries' monthly newsletter, where they share community news, community job postings, and more.
         </p>
         <p class="text-center">
             <a href="https://carpentries.org/newsletter/">
-                <button type="button" class="btn btn-success">Sign up to our newsletter</button>
+                <button type="button" class="btn btn-success">Sign up to The Carpentries' newsletter</button>
             </a>
         </p>
       </div>
@@ -297,9 +290,11 @@ address.
             We do not require participants to provide documentation of disabilities or disclose any unnecessary personal information. 
             However, we do want to help create an inclusive, accessible experience for all participants. 
             We encourage you to share any information that would be helpful to make your Carpentries experience accessible.
+            <!--
             To request accessibility support for this workshop, please fill out the 
             <a href="https://carpentries.typeform.com/to/B2OSYaD0">accessibility support request form</a>.
             If you have questions or need assistance with the accessibility support form please <a href="mailto:team@carpentries.org">email us</a>.
+            -->
             </p>
             <p>
             <a href="https://glosario.carpentries.org/">Glosario</a> is a multilingual glossary for computing and data science terms.
